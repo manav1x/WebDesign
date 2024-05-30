@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Website</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+  <style>
+    /* Custom navigation buttons */
+    .owl-nav button {
+      background: #333;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      margin: 10px;
+      font-size: 18px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .owl-nav button:hover {
+      background: #555;
+    }
+
+    /* Custom easing effect for carousel items */
+    .owl-carousel .owl-stage {
+      transition: all 0.6s ease-in-out;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <img src="images/Untitled.png" alt="Logo">
+    </div>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="#shop" class="button animated-button">Shop</a></li>
+        <li><a href="#collections" class="button animated-button">Collections</a></li>
+        <li><a href="#lookbook" class="button animated-button">Lookbook</a></li>
+        <li><a href="#filter" class="button animated-button">Filter</a></li>
+        <li><a href="#instagram" class="button animated-button">Instagram</a></li>
+      </ul>
+      <ul class="nav-icons">
+        <li><a href="#search"><i class="fas fa-search"></i></a></li>
+        <li><a href="#account"><i class="fas fa-user"></i></a></li>
+        <li><a href="#cart"><i class="fas fa-shopping-cart"></i></a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section class="hero">
+      <div class="hero-content">
+        <h1>Welcome to Our Store</h1>
+        <p>Discover our latest collections</p>
+      </div>
+    </section>
+    <section class="collections">
+      <div class="container">
+        <h2 id="collections">
+          N<span>E</span>W C<span>O</span>L<span>L</span>E<span>C</span>T<span>I</span>O<span>N</span>S
+        </h2>
+        <div class="owl-carousel owl-theme owl-nav-simple owl-nav-inner owl-full-height products owl-loaded owl-drag" data-plugin="owl" data-owl-options='{"autoplayHoverPause":true,"loop":true,"nav":true,"dots":false,"responsive":{"992":{"items":4,"nav":true,"dots":false},"768":{"items":3,"nav":true,"dots":false},"576":{"items":2},"0":{"items":1},"1200":{"items":4,"nav":true,"dots":false}}}'>
+          <!-- Carousel Items -->
+          <div class="item">
+            <div class="product">
+              <div class="image-container">
+                <img src="images/tshirt.jpeg" alt="T-Shirt 0" class="default-img">
+                <img src="images/hover.png" alt="T-Shirt 0 Hover" class="hover-img">
+              </div>
+
+            </div>                            
+          </div>
+          <div class="item">
+            <div class="product">
+              <div class="image-container">
+                <img src="images/tshirt.jpeg" alt="T-Shirt 1" class="default-img">
+                <img src="images/hover.png" alt="T-Shirt 1 Hover" class="hover-img">
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="product">
+              <div class="image-container">
+                <img src="images/tshirt.jpeg" alt="T-Shirt 2" class="default-img">
+                <img src="images/hover.png" alt="T-Shirt 2 Hover" class="hover-img">
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="product">
+              <div class="image-container">
+                <img src="images/tshirt.jpeg" alt="T-Shirt 3" class="default-img">
+                <img src="images/hover.png" alt="T-Shirt 3 Hover" class="hover-img">
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="product">
+              <div class="image-container">
+                <img src="images/tshirt.jpeg" alt="T-Shirt 4" class="default-img">
+                <img src="images/hover.png" alt="T-Shirt 4 Hover" class="hover-img">
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="product">
+              <div class="image-container">
+                <img src="images/tshirt.jpeg" alt="T-Shirt 5" class="default-img">
+                <img src="images/hover.png" alt="T-Shirt 5 Hover" class="hover-img">
+              </div>
+            </div>
+          </div>
+          
+          <div class="item">
+            <div class="product">
+              <img src="images/tshirt.jpeg" alt="T-Shirt 6" class="default-img">
+            </div>
+          </div>
+          <!-- End of Carousel Items -->
+        </div>
+      </div>
+    </section>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script>
+      $(document).ready(function(){
+        $(".owl-carousel").owlCarousel({
+          autoplayHoverPause: true,
+          loop: true,
+          nav: true,
+          dots: false,
+          navText: ['<i class="fas fa-chevron-left"></i>', '<i class="fas fa-chevron-right"></i>'],
+          responsive: {
+            0: {
+              items: 1
+            },
+            576: {
+              items: 2
+            },
+            768: {
+              items: 3
+            },
+            992: {
+              items: 4
+            }
+          }
+        });
+      });
+    </script>
+</body>
+</html>
